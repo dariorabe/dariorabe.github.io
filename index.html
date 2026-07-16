@@ -1,182 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Dario Rabe</title>
-
-<style>
-:root {
-    --color-bg: #0f172a;
-    --color-card: #111827;
-    --color-primary: #3b82f6;
-    --color-text: #e5e7eb;
-    --color-muted: #9ca3af;
-}
-
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* BODY */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: var(--color-text);
-}
-
-/* CONTENEDOR PRINCIPAL */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
-    animation: fadeIn 1s ease-in;
-}
-
-/* TARJETAS */
-.card {
-    background: var(--color-card);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* PERFIL */
-.profile {
-    text-align: center;
-}
-
-.profile img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--color-primary);
-    margin-bottom: 10px;
-}
-
-/* TITULOS */
-h1 {
-    font-size: 24px;
-}
-
-h2 {
-    color: var(--color-primary);
-    margin-bottom: 10px;
-}
-
-/* LISTAS */
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-/* TEXTO */
-p {
-    color: var(--color-muted);
-}
-
-/* SKILLS (TAGS) */
-.skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skills-tags span {
-    background: #1f2937;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    transition: 0.3s;
-    border: 1px solid #374151;
-}
-
-.skills-tags span:hover {
-    background: var(--color-primary);
-    color: white;
-}
-
-/* ANIMACIÓN */
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Dario Rabe</title>
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos profesionales de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
 <div class="container">
 
-    <!-- LADO IZQUIERDO -->
-    <div class="card profile">
-        <img src="Watashi2026.jpeg" alt="Foto de perfil">
-        <h1>Darío Alfredo Rabé Godoy</h1>
-        <p>Estudiante de Ingeniería en Sistemas</p>
-    </div>
-
-    <div class="card">
-        <h2>Perfil</h2>
-        <p>Soy un estudiante de segundo año de Ingeniería en Sistemas en la UMG y del Técnico del desarrollo de Software en la Universidad Galileo.</p>
-    </div>
-
-    <div class="card">
-        <h2>Habilidades</h2>
-        <div class="skills-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>C#</span>
-            <span>PHP</span>
-            <span>SQL</span>
+    <!-- COLUMNA IZQUIERDA (Perfil e Info Personal) -->
+    <aside class="sidebar">
+        <div class="card profile">
+            <img src="Watashi2026.jpeg" alt="Foto de Darío Rabé">
+            <h1>Darío Alfredo Rabé Godoy</h1>
+            <p class="subtitle">Estudiante de Ingeniería en Sistemas</p>
+            
+            <!-- Redes e Interactividad -->
+            <div class="social-links">
+                <a href="https://github.com/Dargo052" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dario-rabe502" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
-    </div>
 
-    <div class="card">
-        <h2>Experiencia</h2>
-        <h3>Soporte Técnico</h3>
-        <p>CSR en alemán | 2019 - Actualidad</p>
-        <ul>
-            <li>Soporte técnico de páginas web (Wix)</li>
-            <li>Optimización de rendimiento</li>
-        </ul>
-    </div>
+        <div class="card info-contact">
+            <h2>Contacto</h2>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:rabedario@gmail.com">rabedario@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+50257318531">+502 5731-8531</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> Amatitlán, Guatemala</p>
+        </div>
 
-    <div class="card">
-        <h2>Contacto</h2>
-        <p>Email: rabedario@gmail.com</p>
-        <p>Tel: 12345678</p>
-    </div>
+        <div class="card languages">
+            <h2>Idiomas</h2>
+            <div class="lang-item">
+                <span>Español</span> <span class="badge">Nativo</span>
+            </div>
+            <div class="lang-item">
+                <span>Inglés</span> <span class="badge level">C1</span>
+            </div>
+            <div class="lang-item">
+                <span>Alemán</span> <span class="badge level">B2</span>
+            </div>
+            <div class="lang-item">
+                <span>Francés</span> <span class="badge level">B1</span>
+            </div>
+            <div class="lang-item">
+                <span>Japonés</span> <span class="badge level">A1</span>
+            </div>
+        </div>
+    </aside>
 
-    <div class="card">
-        <h2>Educación</h2>
-        <p>Ingeniería en Sistemas</p>
-        <p>Universidad Mariano Gálvez 2025 - Actualidad</p>
-        <p>Técnico en Desarrollo de Software</p>
-        <p>Universidad Galileo 2026 - Actualidad</p>
-    </div>
+    <!-- COLUMNA DERECHA (Contenido Principal) -->
+    <main class="main-content">
+        
+        <div class="card">
+            <h2>Perfil Profesional</h2>
+            <p>Estudiante de Ingeniería en Sistemas apasionado por el desarrollo de software, la administración de sistemas y redes, y la enseñanza. Con una sólida base técnica, experiencia laboral multilingüe a nivel internacional y una destacada trayectoria docente que respalda mis habilidades de comunicación, liderazgo y resolución de problemas.</p>
+        </div>
+
+        <div class="card">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>C#</span>
+                <span>PHP</span>
+                <span>SQL</span>
+                <span>POO (Programación Orientada a Objetos)</span>
+                <span>REST APIs</span>
+                <span>Linux Ubuntu (Server Edition)</span>
+                <span>Windows Server</span>
+                <span>Git & GitHub</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Habilidades Blandas</h2>
+            <div class="skills-tags soft-skills">
+                <span>Liderazgo y Docencia</span>
+                <span>Comunicación Intercultural</span>
+                <span>Resolución de Problemas</span>
+                <span>Trabajo en Equipo</span>
+                <span>Adaptabilidad</span>
+                <span>Pensamiento Crítico</span>
+                <span>Atención al Detalle</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Certificaciones</h2>
+            <div class="cert-grid">
+                <div class="cert-item" style="margin-top: 12px;">
+                    <strong>CCNA 1, 2 y 3 (Routing and Switching)</strong>
+                    <p>Edutek</p>
+                </div>
+                <div class="cert-item">
+                    <strong>Cisco Certified Support Technician (CCST) IT</strong>
+                    <p>Cisco Networking Academy</p>
+                </div>
+                <div class="cert-item" style="margin-top: 12px;">
+                    <strong>Networking Basics & Linux Unhatched</strong>
+                    <p>Cisco Networking Academy</p>
+                </div>
+                <div class="cert-item" style="margin-top: 12px;">
+                    <strong>Administración de Servidores Windows</strong>
+                    <p>Edutek</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Experiencia Laboral</h2>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Soporte Técnico en Alemán - Peloton</h3>
+                    <span class="date">Mayo 2025 - Actualidad</span>
+                </div>
+                <p class="company">IntouchCX</p>
+                <ul>
+                    <li>Resolución de incidencias técnicas complejas y soporte de hardware/software en idioma alemán para usuarios de Peloton.</li>
+                    <li>Garantizar altos estándares de satisfacción y diagnóstico efectivo de errores de sistema.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Soporte Técnico de Páginas Web (Wix)</h3>
+                    <span class="date">2019 - 2025</span>
+                </div>
+                <p class="company">TELUS International</p>
+                <ul>
+                    <li>Soporte técnico especializado para la plataforma de desarrollo web Wix, optimizando rendimiento y resolviendo problemas de diseño, dominios y hosting.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Experiencia Docente</h2>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Catedrático de Inglés</h3>
+                    <span class="date">5 Años</span>
+                </div>
+                <p class="company">Universidad Galileo (Sede Amatitlán)</p>
+                <ul>
+                    <li>Planificación y desarrollo de clases de inglés universitario, facilitando el aprendizaje del idioma y evaluando el progreso académico de los estudiantes.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Catedrático de Alemán</h3>
+                    <span class="date">3 Años</span>
+                </div>
+                <p class="company">CALUSAC</p>
+                <ul>
+                    <li>Enseñanza del idioma alemán bajo metodologías interactivas y estructuradas en el programa oficial de idiomas de la USAC.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3>Catedrático de Inglés</h3>
+                    <span class="date">2 Años</span>
+                </div>
+                <p class="company">Academia Liaison (Amatitlán)</p>
+                <ul>
+                    <li>Instrucción del idioma inglés para diferentes niveles académicos, fortaleciendo la gramática, vocabulario y destrezas de conversación de los estudiantes.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Educación</h2>
+            
+            <div class="edu-item">
+                <div class="edu-header">
+                    <h3>Ingeniería en Sistemas de Información</h3>
+                    <span class="grade">Promedio: 92/100</span>
+                </div>
+                <p>Universidad Mariano Gálvez | 4to Semestre (2025 - Actualidad)</p>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-header">
+                    <h3>Técnico en Desarrollo de Software</h3>
+                    <span class="grade">Promedio: 95/100</span>
+                </div>
+                <p>Universidad Galileo | 3er Trimestre (2026 - Actualidad)</p>
+            </div>
+        </div>
+
+    </main>
 
 </div>
 
